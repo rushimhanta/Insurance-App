@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: insurance-eta-deploy
   labels:
-    app: insurance-eta-deploy-lbl
+    app: insurance-eta-app
 spec:
   replicas: 3
   selector:
@@ -28,10 +28,10 @@ metadata:
     app: insurance-eta-app
 spec:
   selector:
-    app: insurance-eta-deploy-lbl
+    app: insurance-eta-app
 
   type: NodePort
   ports:
-  - nodePort: 31030
+  - nodePort: 31032  
     port: 8081
     targetPort: 8081
